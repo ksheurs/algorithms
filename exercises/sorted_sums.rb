@@ -1,0 +1,1 @@
+# You have two sorted lists A and B, find the kth smallest sum. Where sum is defined as a+b such that a belongs to list A and b belongs to list B. For e.g, if A=[1,2,3] B=[4,5,6], the list of possible sums are [5,6,6,7,7,7,8,8,9], and hence the 5th smallest sum is 7.  
