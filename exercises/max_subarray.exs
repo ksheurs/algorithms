@@ -21,8 +21,8 @@ defmodule MaxSubarray do
       Enum.reduce(1..length(nums) - 1, acc, fn i, {current_max, max, start_index, end_index} ->
         value_at_index = Enum.at(nums, i)
 
-        current_max = Enum.max([value_at_index, current_max + value_at_index])
-        max = Enum.max([max, current_max])
+        current_max = max(value_at_index, current_max + value_at_index)
+        max = max(current_max, max)
 
         start_index = if current_max == value_at_index and current_max >= max, do: i, else: start_index
         end_index = if max <= current_max, do: i, else: end_index
